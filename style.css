@@ -1,0 +1,160 @@
+html{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-image: url(background.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-size: cover;
+    background-color: #5ED2E9;
+}
+
+.blur{
+  backdrop-filter: blur(3px);
+  height: auto;
+  width: 100%;
+}
+
+/* Рабочая площадь со всеми предметами */
+.workspace{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+}
+/* Рабочая площадь с Обычными предметами */
+.workspace__Common{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.Common{
+    background: radial-gradient(rgb(90, 89, 89), rgb(175, 174, 174));
+    margin: 10px 5px 0 5px;
+    border: 2px solid white;
+}
+/* Общая настройка для редких предметов */
+.workspace__Rare{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.Rare{
+    background: radial-gradient(rgb(2, 53, 2), rgb(55, 148, 75));
+    margin: 10px 5px 0 5px;
+    border: 2px solid white;
+}
+/* Легендарные предметы настройка */
+.workspace__red{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.red{
+    background: radial-gradient(rgb(255, 15, 15), rgb(65, 4, 4));
+    margin: 10px 5px 0 5px;
+    border: 2px solid white;
+}
+
+/* Предметы боссов настройка */
+.workspace__boss{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.boss{
+    background: radial-gradient(#ebff0b, #5f6802);
+    margin: 10px 5px 0 5px;
+    border: 2px solid white;
+}
+
+/* Настройка лунных предметов */
+.workspace__lunar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.lunar{
+    background: radial-gradient(#0befff, #034e53);
+    margin: 10px 5px 0 5px;
+    border: 2px solid white;
+}
+
+/* Пустотные предметы */
+.workspace__void{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.void{
+    background: radial-gradient(#de10fd, #35033d);
+    margin: 10px 5px 0 5px;
+    border: 2px solid white;
+}
+/* Активные предметы */
+.workspace__equipment{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.equipment{
+    background: radial-gradient(#ac5901, #502900);
+    margin: 10px 5px 0 5px;
+    border: 2px solid white;
+}
+
+
+
+/* Общая конфигурация для предметов */
+.item{
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    width: 95px;
+    height: auto;
+}
+
+.item img{
+    width: 92px;
+    height: 92px;
+}
+/* Общая конфигурация для информации о предмете */
+.info{
+    width: 93px;
+    height: auto;
+    cursor: text;
+}
+/* Общая настройка списков*/
+ul{
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    position: absolute;
+    list-style-type: none;
+    background: linear-gradient(90deg, rgba(103,104,217,1) 0%, rgba(0,212,255,1) 100%);
+    border-radius: 5px;
+    border: 1.5px solid black;
+    padding: 10px 5px 10px 10px
+}
+
+li{
+    text-shadow: 1px 1px 2px rgb(0, 0, 0);
+    color: white;
+    max-width: 250px;
+    font-size: 18px;
+}

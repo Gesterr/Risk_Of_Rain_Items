@@ -1,0 +1,1631 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сайт инвентарь</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js">     
+   </script>
+
+
+</head>
+<body class="blur">
+    <img src="logo.png" alt="" style="width: 100%; height: auto;">
+    <header style="display: flex; justify-content: space-evenly;"><h1 style="text-align: center; font-size: 10px;text-shadow: 2px 2px 1px black; color: white; font-family: Roboto Condensed; opacity: 0;">RISK OF RAIN ITEMS</h1></header>
+    <div class="workspace">
+        <div class="container">
+                <!-- Common'ки -->
+            <h1 style="color:white;text-shadow: 3px 2px 5px black; font-family: Roboto Condensed; font-size: 30px; text-align: center;">Обычные предметы</h1>
+            <div class="workspace__Common">  
+                <div class="item Common">
+                    <a id="item1" onclick="check(this.id)"><img src="inv/Common/Armor-Piercing_Rounds.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info1">
+                            <li><b>Бронебойные пули</b></li>
+                            <li>Наносит 20% дополнительного урона (+20% за стак) по боссам. Для открытия нужно 1 раз зарядить телепорт</li>
+                        </ul>
+                    </div>
+                </div>  
+                <div class="item Common">
+                    <a id="item2" onclick="check(this.id)"><img src="inv/Common/Backup_Magazine.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info2">
+                            <li><b>Запасной магазин</b></li>
+                            <li>Добавляет 1 (+1 за стак) заряд ко второй способности. Для открытия нужно зарядить портал, ни разу не получив урона.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item Common">
+                    <a id="item3" onclick="check(this.id)"><img src="inv/Common/Bison_Steak.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info3">
+                            <li><b>Стейк из Бизона</b></li>
+                            <li>Увеличивает максимальное здоровье на 25 (+25 за стак). Открыт изначально</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item Common">
+                    <a id="item4_1" onclick="check(this.id)"><img src="inv/Common/Bundle_of_Fireworks.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info4_1">
+                            <li><b>Связка петард</b></li>
+                            <li>При использовании объекта запускаются 8 (+4 за стак) ракет, которые наносят 300% урона. Для открытия нужно скопировать один и тот же предмет на принтере 7 раз</li>
+                        </ul>
+                    </div>
+                </div>  
+                <div class="item Common">
+                    <a id="item4" onclick="check(this.id)"><img src="inv/Common/Bustling_Fungus.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info4">
+                            <li><b>Буйногриб</b></li>
+                            <li>Если стоите неподвижно в течение 1 секунды, появляется зона радиусом 3 метра (+1,5 метра за стак), которая исцеляет на 4,5% (+2,25% за стак) здоровья в секунду вам и вашим союзникам. Открыт изначально.</li>
+                        </ul>
+                    </div>
+                </div> 
+                <div class="item Common">
+                    <a id="item5" onclick="check(this.id)"><img src="inv/Common/Cautious_Slug.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info5">
+                            <li><b>Осторожный слизень</b></li>
+                            <li>Увеличивает пассивное восстановление здоровья на +3 HP в секунду (+3 HP в секунду за стак) вне боя. Открыт изначально.</li>
+                        </ul>
+                    </div>
+                </div> 
+                <div class="item Common">
+                    <a id="item6" onclick="check(this.id)"><img src="inv/Common/Crowbar.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info6">
+                            <li><b>Лом</b></li>
+                            <li>Наносит 75% (+75% за стак) урона врагам со здоровьем выше 90%. Найдите 10 уникальных белых предметов.</li>
+                        </ul>
+                    </div>
+                </div> 
+                <div class="item Common">
+                    <a id="item7" onclick="check(this.id)"><img src="inv/Common/Delicate_Watch.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info7">
+                            <li><b>Изящные часы</b></li>
+                            <li>Увеличивает урон на 20% (+20% за стак). Получение урона ниже 25% здоровья разрушает этот предмет.</li>
+                        </ul>
+                    </div>
+                </div> 
+                <div class="item Common">
+                    <a id="item7_1" onclick="check(this.id)"><img src="inv/Common/Energy_Drink.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info7_1">
+                            <li><b>Энергетик</b></li>
+                            <li>Скорость бега увеличивается на 25% (+25% за стак). Открыт изначально.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item Common">
+                    <a id="item8" onclick="check(this.id)"><img src="inv/Common/Gasoline.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info8">
+                            <li><b>Бензин</b></li>
+                            <li>При убийстве врага поджигаются ближайшие враги в радиусе 12 метров (+4 метра за стак). Горящим противникам наносится 150% (+75% за стак) урона. Открыт изначально.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item Common">
+                    <a id="item9" onclick="check(this.id)"><img src="inv/Common/Item_Scrap_White.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info9">
+                            <li><b>Мусор - белого качества</b></li>
+                            <li>Приоритетно используется в принтере</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item Common">
+                    <a id="item10" onclick="check(this.id)"><img src="inv/Common/Lens-Maker_Glasses.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info10">
+                            <li><b>Lens-Maker's очки</b></li>
+                            <li>Атаки с вероятностью +10% за стак могут нанести двойной урон. Открыт изначально</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item Common">
+                    <a id="item11" onclick="check(this.id)"><img src="inv/Common/Medkit.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info11">
+                            <li><b>Аптечка</b></li>
+                            <li>Через 2 секунды после получения урона лечит на 20 HP +5% (+5% за стак) от макс HP. Победите элитного монстра.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item Common">
+                    <a id="item11_1" onclick="check(this.id)"><img src="inv/Common/Focus_Crystal.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info11_1">
+                            <li><b>Кристалл сосредоточения</b></li>
+                            <li>Повышает наносимый врагам урон +20% за стак в радиусе 13 метров. Открыт изначально.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item Common">
+                    <a id="item12" onclick="check(this.id)"><img src="inv/Common/Mocha.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info12">
+                            <li><b>Кофе</b></li>
+                            <li>Увеличивает скорость атаки на 7,5% (+7,5 за стак) и скорость передвижения на 7% (+7% за стак)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item Common">
+                    <a id="item13" onclick="check(this.id)"><img src="inv/Common/Oddly-shaped_Opal.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info13">
+                            <li><b>Опал странной формы</b></li>
+                            <li>Увеличьте броню на 100 (+100 за стак), находясь вне опасности.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item Common">
+                    <a id="item14" onclick="check(this.id)"><img src="inv/Common/Paul's_Goat_Hoof.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info14">
+                            <li><b>Козлиное копыто Пола.</b></li>
+                            <li>Увеличивает скорость передвижения на +14% за стак. Три раза подряд потерпите неудачу в Святилище Удачи. </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item Common">
+                    <a id="item15" onclick="check(this.id)"><img src="inv/Common/Personal_Shield_Generator.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info15">
+                            <li><b>Персональный генератор щита</b></li>
+                            <li>Дает игроку +8% щита за стак, который восстанавливается вне боя за 7 секунд после получения урона. Открыт изначально. </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item Common">
+                    <a id="item16" onclick="check(this.id)"><img src="inv/Common/Power_Elixir.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info16">
+                            <li><b>Эликсир силы</b></li>
+                            <li>При нанесении урона ниже 25% здоровья расходуется этот предмет, восстанавливающий вас на 75% от максимального уровня здоровья.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item Common">
+                    <a id="item17" onclick="check(this.id)"><img src="inv/Common/Repulsion_Armor_Plate.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info17">
+                            <li><b>Отталкивающая бронепластина</b></li>
+                            <li>Уменьшение всего входящего урона на +5 за стак. Не может быть уменьшено ниже 1. Открыт изначально. </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item Common">
+                    <a id="item18" onclick="check(this.id)"><img src="inv/Common/Roll_of_Pennies.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info18">
+                            <li><b>Пачка пенни</b></li>
+                            <li>Получайте 3 (+3 за стaк) золотых за нанесение урона врагу. Масштабируется со временем.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item Common">
+                    <a id="item19" onclick="check(this.id)"><img src="inv/Common/Rusted_Key.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info19">
+                            <li><b>Ржавый ключ</b></li>
+                            <li>Появляется ящик, содержащий предмет с шансом: 80% зеленый или 20% красный. Открытие ящика использует ключ. Победите босса телепорта, уложившись в 15 секунд.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item Common">
+                    <a id="item20" onclick="check(this.id)"><img src="inv/Common/Sticky_Bomb.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info20">
+                            <li><b>Липкая бомба</b></li>
+                            <li>Шанс +5% прикрепить к противнику бомбу за стак, нанеся 180% урона. Открыт изначально. </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item Common">
+                    <a id="item21" onclick="check(this.id)"><img src="inv/Common/Stun_Grenade.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info21">
+                            <li><b>Оглущающая граната</b></li>
+                            <li>Шанс +5% оглушить противника при попадании на 2 секунды за стак.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item Common">
+                    <a id="item22" onclick="check(this.id)"><img src="inv/Common/Syringe.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info22">
+                            <li><b>Шприц солдата</b></li>
+                            <li>Увеличивает скорость атаки на +15% за стак. </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item Common">
+                    <a id="item23" onclick="check(this.id)"><img src="inv/Common/Topaz_Brooch.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info23">
+                            <li><b>Брошь с топазом</b></li>
+                            <li>Дает временную броню на 15 здоровья после убийства.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item Common">
+                    <a id="item24" onclick="check(this.id)"><img src="inv/Common/Tougher_Times.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info24">
+                            <li><b>Тяжелые времена</b></li>
+                            <li>+15% шанса заблокировать входящий урон за каждый стак. Не зависит от удачи. Умрите 5 раз.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item Common">
+                    <a id="item25" onclick="check(this.id)"><img src="inv/Common/Tri-Tip_Dagger.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info25">
+                            <li><b>Трехгранный кинжал</b></li>
+                            <li>+10% шанс нанести кровотечение противникам за стак, наносящее 240% урона.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item Common">
+                    <a id="item26" onclick="check(this.id)"><img src="inv/Common/Warbanner.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info26">
+                            <li><b>Боевой стяг</b></li>
+                            <li>При повышении уровня на землю падает знамя, которое дает +30% к скорости атаки и передвижения в радиусе 16 метров. (+8 метров за стак).</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Rare'ки -->
+            <br>
+            <h1 style="color:#7BC742;text-shadow: 3px 2px 5px black; font-family: Roboto Condensed; font-size: 30px; text-align: center;">Редкие предметы</h1>    
+            <div class="workspace__Rare">
+                <div class="item Rare">
+                    <a id="item27" onclick="check(this.id)"><img src="inv/Rare/AtG_Missile_Mk._1.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info27">
+                            <li><b>Ракета "воздух-земля" Mk.1</b></li>
+                            <li>Каждая атака получает 10% шанс выпустить самонаводящуюся ракету, которая наносит +300% урона за стак. Открыт изначально. </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item Rare">
+                    <a id="item28" onclick="check(this.id)"><img src="inv/Rare/Will-the-wisp.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info28">
+                            <li><b>Блуждающий огонёк</b></li>
+                            <li>При убийстве врага появляется столб лавы, который в радиусе 12 метров (+2,4 метра за стак) наносит 350% (+280% за стак) базового урона. Открыт изначально.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item Rare">
+                    <a id="item29" onclick="check(this.id)"><img src="inv/Rare/Hopoo_Feather.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info29">
+                            <li><b>Перо хопа</b></li>
+                            <li>Дает +1 прыжок за стак. Открыт изначально.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item Rare">
+                    <a id="item30" onclick="check(this.id)"><img src="inv/Rare/Ukulele.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info30">
+                            <li><b>Укулеле</b></li>
+                            <li>Каждая атака получает 25% шанс выпустить цепную молнию, наносящую 80% урона 3 целям (+2 за стак) в радиусе 20 метров. (+2 метра за стак). Открыт изначально.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item Rare">
+                    <a id="item31" onclick="check(this.id)"><img src="inv/Rare/Leeching_Seed.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info31">
+                            <li><b>Семя кровососа</b></li>
+                            <li>Каждая атака восстанавливает единицу здоровья за стак. Открыт изначально.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item Rare">
+                    <a id="item32" onclick="check(this.id)"><img src="inv/Rare/Predatory_Instincts.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info32">
+                            <li><b>Инстикты хищника</b></li>
+                            <li>Критический удар увеличивает скорость атаки на 10% на короткое время. Максимум 30% (+20% за стак) скорости атаки. Достичь +200% скорости атаки. </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item Rare">
+                    <a id="item33" onclick="check(this.id)"><img src="inv/Rare/Red_Whip.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info33">
+                            <li><b>Красный хлыст</b></li>
+                            <li>Увеличивает скорость передвижения на +30% за стак вне боя. Открыт изначально.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item Rare">
+                    <a id="item34" onclick="check(this.id)"><img src="inv/Rare/Old_War_Stealthkit.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info34">
+                            <li><b>Стырй боевой набор скрытности</b></li>
+                            <li>При получении урона есть шанс получить +40% скорости передвижения и невидимость на 3 секунды (+1,5 секунды за стак). Чем больше урона вы получили, тем больше шанс. Открыт изначально.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item Rare">
+                    <a id="item35" onclick="check(this.id)"><img src="inv/Rare/Harvester's_Scythe.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info35">
+                            <li><b>Серп жнеца</b></li>
+                            <li>Дает 5% критического удара. Критический удар лечит на 8 (+4 за стак) единиц.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item Rare">
+                    <a id="item36" onclick="check(this.id)"><img src="inv/Rare/Fuel_Cell.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info36">
+                            <li><b>Топливная батарея</b></li>
+                            <li>Дает +1 за стак заряд для активного предмета, а также уменьшает его время перезарядки на +15% за стак. Подобрать пять разных типов снаряжения.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item Rare">
+                    <a id="item37" onclick="check(this.id)"><img src="inv/Rare/Infusion.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info37">
+                            <li><b>Инъекция</b></li>
+                            <li>Убийство врага дает единицу здоровья навсегда за стак, максимум добавляет +100 единиц здоровья за стак. Убейте 3000 врагов.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item Rare">
+                    <a id="item38" onclick="check(this.id)"><img src="inv/Rare/Bandolier.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info38">
+                            <li><b>Патронаш</b></li>
+                            <li>Дает шанс 18% (+10% за стак) после убийства врага заспавнить коробку с патронами, которая перезаряжает все способности. Открыт изначально.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item Rare">
+                    <a id="item39" onclick="check(this.id)"><img src="inv/Rare/Berzerkers_Pauldron.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info39">
+                            <li><b>Наплечник берсерка</b></li>
+                            <li>Убийство трех врагов за секунду вводит вас в бешенство на 6 секунд (+4 секунды за стак), увеличивает скорость передвижения на 50% и скорость атаки на 100%. Зарядите телепорт, имея меньше 10% здоровья.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item Rare">
+                    <a id="item40" onclick="check(this.id)"><img src="inv/Rare/Rose_Buckler.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info40">
+                            <li><b>Щит розы</b></li>
+                            <li>Увеличение брони во время бега на +30 единиц за стак. Открыт изначально.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item Rare">
+                    <a id="item41" onclick="check(this.id)"><img src="inv/Rare/Runalds_Band.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info41">
+                            <li><b>Браслет Рунальда </b></li>
+                            <li>Попадание наносит по врагам 400% и взрывается, нанося 250% (+250% урона за стак), замедляя на 80%. Длится 3 секунды (+3 секунды за стак). Заряжается каждые 10 секунд. Найдите и убейте Кьяро и Рунальда в потайной комнате на Заброшенном акведуке. </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item Rare">
+                    <a id="item42" onclick="check(this.id)"><img src="inv/Rare/Kjaros_Band.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info42">
+                            <li><b>Браслет Кьяро</b></li>
+                            <li>Попадание наносит по врагам 400% и взрывается, нанося 300% (+300% урона за стак). Заряжается каждые 10 секунд. Найдите и убейте Кьяро и Рунальда в потайной комнате на Заброшенном акведуке.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item Rare">
+                    <a id="item43" onclick="check(this.id)"><img src="inv/Rare/Chronobauble.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info43">
+                            <li><b>Хроноштучка</b></li>
+                            <li>Замедляет врагов на 60% на +2 секунды за стак. Открыт изначально.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item Rare">
+                    <a id="item44" onclick="check(this.id)"><img src="inv/Rare/Wax_Quail.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info44">
+                            <li><b>Восковая перепелка</b></li>
+                            <li>Прыгая во время бега вас подбрасывает вперед на +10 метров за стак. Достичь +300% скорости передвижения (в том числе и бег).</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item Rare">
+                    <a id="item45" onclick="check(this.id)"><img src="inv/Rare/Old_Guillotine.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info45">
+                            <li><b>Старинная гильотина</b></li>
+                            <li>Мгновенно убивает элитных монстров, у которых осталось меньше +20% здоровья за стак. Победите 500 элитных монстров</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item Rare">
+                    <a id="item46" onclick="check(this.id)"><img src="inv/Rare/War_Horn.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info46">
+                            <li><b>Боевой рог </b></li>
+                            <li>При использовании снаряжения вы получаете 70% к скорости атаки на 8 секунд (+4 секунды за стак). Используйте 3 Святилища битвы на одном уровне.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item Rare">
+                    <a id="item47" onclick="check(this.id)"><img src="inv/Rare/Lepton_Daisy.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info47">
+                            <li><b>Лептонная ромашка.</b></li>
+                            <li>Устраивает исцеляющий взрыв во время зарядки телепорта и исцеляет союзников в радиусе портала на 50% от их максимального запаса здоровья. Срабатывает +1 раз за стак. Открыт изначально.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item Rare">
+                    <a id="item48" onclick="check(this.id)"><img src="inv/Rare/Razorwire.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info48">
+                            <li><b>Колючая проволока </b></li>
+                            <li>При получении урона выпускает шквал лезвий, наносящих 160% урона. Поражается до 5 (+2 за стак) целей в радиусе 25 метров (+10 метров за стак). Открыт изначально.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item Rare">
+                    <a id="item49" onclick="check(this.id)"><img src="inv/Rare/Ghors_Tome.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info49">
+                            <li><b>Фолиант гора </b></li>
+                            <li>Вероятность получения сокровища стоимостью 25$ при убийстве + 4% за стак. Награда увеличивается со сложностью. Открыт изначально.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item Rare">
+                    <a id="item50" onclick="check(this.id)"><img src="inv/Rare/Squid_Polyp.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info50">
+                            <li><b>Полип спрута </b></li>
+                            <li>При активации интерактива призывает турель, атакующую ближайших врагов с +100% скоростью атаки за стак. Живет 30 секунд. Активируйте 6 турелей за забег.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item Rare">
+                    <a id="item51" onclick="check(this.id)"><img src="inv/Rare/Death_Mark.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info51">
+                            <li><b>Метка смерти </b></li>
+                            <li>Враги с 4 или более ослаблениями отмечаются меткой смерти. Получаемый ими урон от всех источников увеличивается на 50% на 7 секунд за стак.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item Rare">
+                    <a id="item52" onclick="check(this.id)"><img src="inv/Rare/Hunters_Harpoon.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info52">
+                            <li><b>Охотничий гарпун</b></li>
+                            <li>Убийство врага увеличивает скорость передвижения на 125%, затухая в течение 1 секунды (+0,5 за стек).</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item Rare">
+                    <a id="item53" onclick="check(this.id)"><img src="inv/Rare/Ignition_Tank.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info53">
+                            <li><b>Резервуар для воспламенения</b></li>
+                            <li>Эффекты воспламенения наносят на +300% (+300% за стек) больше урона с течением времени.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item Rare">
+                    <a id="item54" onclick="check(this.id)"><img src="inv/Rare/Shuriken.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info54">
+                            <li><b>Сюрикен</b></li>
+                            <li>Активация вашего основного навыка также выбрасывает сюрикен, который наносит 400% (+100% за стек) базового урона. Вы можете удерживать до 3 (+1 за стек) сюрикенов, которые перезаряжаются в течение 10 секунд.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item Rare">
+                    <a id="item55" onclick="check(this.id)"><img src="inv/Rare/Regenerating_Scrap.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info55">
+                            <li><b>Регенерирующий лом</b></li>
+                            <li>Ничего не делает. Имеет приоритет при использовании с необычными 3D-принтерами. В начале каждого этапа он восстанавливается.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item Rare">
+                    <a id="item56" onclick="check(this.id)"><img src="inv/Rare/Shipping_Request_Form.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info56">
+                            <li><b>Форма запроса на доставку</b></li>
+                            <li>Посылка, содержащая 2 предмета (79%/20%/1%), будет появляться в случайном месте на каждом этапе. (Увеличивает вероятность редкости предметов в стаке).</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item Rare">
+                    <a id="item57" onclick="check(this.id)"><img src="inv/Rare/Item_Scrap_Green.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info57">
+                            <li><b>Лом, зеленый</b></li>
+                            <li>Ничего не делает. Имеет приоритет при использовании с 3D-принтерами.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>
+            <br>
+            <!-- Легендарки-->
+            <h1 style="color:#c70f09;text-shadow: 3px 2px 5px black; font-family: Roboto Condensed; font-size: 30px; text-align: center;">Легендарные предметы</h1>
+            <div class="workspace__red">
+                <div class="item red">
+                    <a id="item57_1" onclick="check(this.id)"><img src="inv/Legendary/Brilliant_Behemoth.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info57_1">
+                            <li><b>Блистающая махина</b></li>
+                            <li>Все атаки взрываются, нанося 60% урона всем врагам в радиусе 4 м (+2,5 м за шт.) Открыт изначально. </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item red">
+                    <a id="item58" onclick="check(this.id)"><img src="inv/Legendary/Ceremonial_Dagger.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info58">
+                            <li><b>Церемониальный Кинжал</b></li>
+                            <li>Убийство врага создаёт 3 самонаводящихся кинжала, которые наносят +150% за шт. урона</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item red">
+                    <a id="item59" onclick="check(this.id)"><img src="inv/Legendary/Frost_Relic.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info59">
+                            <li><b>Морозная реликвия</b></li>
+                            <li>Убийство врага призывает ледяную бурю, которая возникает вокруг вас и наносит 1200% урона в секунду и замедляет врагов на 80% на 1,5 сек. Буря растёт после каждого убийства на 2 м. Максимальный рост - 18 м(+12 м за шт.)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item red">
+                    <a id="item60" onclick="check(this.id)"><img src="inv/Legendary/Happiest_Mask.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info60">
+                            <li><b>Счастливая Маска</b></li>
+                            <li>Убийство врага имеет 7% шанс призвать призрака врага, которые наносит 1500% базового урона. Призрак живёт +30 сек. за шт.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item red">
+                    <a id="item61" onclick="check(this.id)"><img src="inv/Legendary/H3AD-5T_v2.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info61">
+                            <li><b>Г0Л080-60Й вер.2</b></li>
+                            <li>В прыжке удержать кнопку взаимодействия. Увеличивает высоту прыжка. При приземлении вызывает кинетическую волну радиусом 5-100 м., которая наносит 1000%-10000% базового урона всем врагам в радиусе. Перезаряжается 10 секунд (-50% за шт.)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item red">
+                    <a id="item62" onclick="check(this.id)"><img src="inv/Legendary/N27s_Opinion.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info62">
+                            <li><b>Мнение Н'Куханы</b></li>
+                            <li>Сохраняет 100% за шт. лечения в виде энергии души. Когда ваш запас энергии души достигнет 10% от вашего максимального уровня здоровья, выстреливает черепом, наносящим 250% вашего запаса энергии души в виде урона</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item red">
+                    <a id="item63" onclick="check(this.id)"><img src="inv/Legendary/Unstable_Tesla_Coil.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info63">
+                            <li><b>Нестабильная катушка тесла</b></li>
+                            <li>Бьёт молниями 3 (+2 за шт.) ближайших врагов, нанося 200% базового урона каждые 0.5 сек. Каждые 10 сек. катушка Теслы отключается</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item red">
+                    <a id="item64" onclick="check(this.id)"><img src="inv/Legendary/57_Leaf_Clover.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info64">
+                            <li><b>57-листный клевер</b></li>
+                            <li>Все случайные эффекты получают +1 за шт. дополнительный бросок на удачный результат</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item red">
+                    <a id="item65" onclick="check(this.id)"><img src="inv/Legendary/Sentient_Meat_Hook.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info65">
+                            <li><b>Разумный Крюк для Мяса</b></li>
+                            <li>Каждая атака имеет +20% за шт. шанс выпустить 10 (+5 за шт.) самонаводящихся крюков, которые наносят 100% урона</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item red">
+                    <a id="item66" onclick="check(this.id)"><img src="inv/Legendary/Alien_Head.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info66">
+                            <li><b>Голова инопланетянина</b></li>
+                            <li>Уменьшает время перезарядки способностей на +25% за шт.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item red">
+                    <a id="item67" onclick="check(this.id)"><img src="inv/Legendary/Soulbound_Catalyst.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info67">
+                            <li><b>Персональный катализатор</b></li>
+                            <li>Убийство уменьшает время перезарядки активного предмета на 4 сек. (+2 сек. за шт.)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item red">
+                    <a id="item68" onclick="check(this.id)"><img src="inv/Legendary/Dio27s_Best_Friend.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info68">
+                            <li><b>Лучший друг Дио</b></li>
+                            <li>Возрождает +1 за шт. после смерти. После возрождения вы неуязвимы на 3 сек.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item red">
+                    <a id="item69" onclick="check(this.id)"><img src="inv/Legendary/Hardlight_Afterburner.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info69">
+                            <li><b>Камера жесткого излучения</b></li>
+                            <li>Добавляет +2 за шт. заряда к вспомогательному навыку и уменьшает его перезарядку на 33%</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item red">
+                    <a id="item70" onclick="check(this.id)"><img src="inv/Legendary/Wake_of_Vultures.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info70">
+                            <li><b>Пробуждение стервятников</b></li>
+                            <li>Даёт силу любого элитного врага на 8 секунд (+5 сек. за шт.)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item red">
+                    <a id="item71" onclick="check(this.id)"><img src="inv/Legendary/Brainstalks.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info71">
+                            <li><b>Mozgojor</b></li>
+                            <li>После убийства элитного врага, даёт бешенство на 4 сек. (+4 сек. за шт) делая перезарядку навыков 0,5 сек.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item red">
+                    <a id="item72" onclick="check(this.id)"><img src="inv/Legendary/Rejuvenation_Rack.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info72">
+                            <li><b>Стойка регенерации</b></li>
+                            <li>Лечение восстанавливает на +100% за шт. больше здоровья</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item red">
+                    <a id="item73" onclick="check(this.id)"><img src="inv/Legendary/Aegis.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info73">
+                            <li><b>Покров</b></li>
+                            <li>Лечение сверх максимального здоровья дает временный барьер мощностью до +50% за шт. от максимального здоровья</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item red">
+                    <a id="item74" onclick="check(this.id)"><img src="inv/Legendary/Shattering_Justice.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info74">
+                            <li><b>Убийственная справедливость</b></li>
+                            <li>После 5 попаданий (стак) по врагу его броня снижается на 60 на +8 за стак сек.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item red">
+                    <a id="item75" onclick="check(this.id)"><img src="inv/Legendary/Resonance_Disc.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info75">
+                            <li><b>Резонирующий диск</b></li>
+                            <li>Убив 4 врага за 7 секунд, диск перезарядится. Диск сам выстреливает в цель, проходя через врагов нанося им урон +300% за шт. базового урона, потом взрывается +1000% за шт. базового урона, возвращаясь к владельцу проходит через врагов и наносит им +300% за шт. урона</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item red">
+                    <a id="item76" onclick="check(this.id)"><img src="inv/Legendary/Interstellar_Desk_Plant.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info76">
+                            <li><b>Межзвёздное настольное растение</b></li>
+                            <li>Растение, лечит 5% макс. здоровья каждые 0,5 секунды в радиусе 10 метров (+5 метра за шт.). Продолжительность 10 сек.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item red">
+                    <a id="item77" onclick="check(this.id)"><img src="inv/Legendary/Defensive_Microbots.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info77">
+                            <li><b>Защитные миниботы</b></li>
+                            <li>Сбивает 1(+1 за шт.) атакующие снаряды на расстоянии 20 метров каждые 0,5 сек. Скорость перезарядки зависит от вашей скорострельности</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item red">
+                    <a id="item78" onclick="check(this.id)"><img src="inv/Legendary/Laser_Scope.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info78">
+                            <li><b>Лазерный прицел</b></li>
+                            <li>Критические попадания дополнительно наносят 100% (+100% за шт.) урона</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item red">
+                    <a id="item79" onclick="check(this.id)"><img src="inv/Legendary/Pocket_I.C.B.M..webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info79">
+                            <li><b>Карманная М.К.Б.Р.</b></li>
+                            <li>Все ракетные устройства выстреливают на 2 ракеты больше, увеличивает урон ракет на 50% (+50% за шт.)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item red">
+                    <a id="item80" onclick="check(this.id)"><img src="inv/Legendary/Spare_Drone_Parts.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info80">
+                            <li><b>Запасные части дрона</b></li>
+                            <li>Даёт Col.DroneMan. Дроны получают +50% (+50% за шт.) к скорости атаки и уменьшает перезарядку способностей. Даёт дронам 10% шанс выстрелить ракетой за попадание, наносят 300% от всего урона.Дроны получают миниганы которые наносят 6x100% урона, отскакивая в двух врагов</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item red">
+                    <a id="item81" onclick="check(this.id)"><img src="inv/Legendary/Symbiotic_Scorpion.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info81">
+                            <li><b>Симбиоз скорпиона</b></li>
+                            <li>За попадание по врагу снимет ему показатель брони на 2 (+2 за шт.) ед.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item red">
+                    <a id="item82" onclick="check(this.id)"><img src="inv/Legendary/Ben27s_Raincoat.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info82">
+                            <li><b>Плащ Бена</b></li>
+                            <li>Предотвращает получение 1 (+1 за шт.) отрицательного эффекта, создавая временный барьер, прочность которого равна 10% от макс. здоровья.
+                                Восстанавливается каждые 5 секунд.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item red">
+                    <a id="item83" onclick="check(this.id)"><img src="inv/Legendary/Bottled_Chaos.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info83">
+                            <li><b>Хаос в бутылке</b></li>
+                            <li>Активирует случайный эффект активного предмета 1 (+1 за шт.) раз</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item red">
+                    <a id="item84" onclick="check(this.id)"><img src="inv/Legendary/Item_Scra2C_Red.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info84">
+                            <li><b>Лом, красный</b></li>
+                            <li>Ничего не делает. Имеет приоритет при использовании с 3D-принтерами.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>             
+            <br>
+            <!-- Боссы -->
+            <h1 style="color:#c2cf2c;text-shadow: 3px 2px 5px black; font-family: Roboto Condensed; font-size: 30px; text-align: center;">Боссов/Планет предметы</h1>
+            <div class="workspace__boss">
+                <div class="item boss">
+                    <a id="item85" onclick="check(this.id)"><img src="inv/Boss/Titanic_Knurl.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info85">
+                            <li><b>Титаническая шишка</b></li>
+                            <li>Увеличивает максимальное здоровье на +40 ед. за шт. и регенерацию на +1.6 здоровья/сек. за шт.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item boss">
+                    <a id="item86" onclick="check(this.id)"><img src="inv/Boss/Queen27s_Gland.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info86">
+                            <li><b>Железа королевы</b></li>
+                            <li>Призывает каждые 30 сек. Жука-стражника, который имеет 100% здоровья и наносит 300% базового урона. Максимум +1 за шт. Жук-стражник одновременно</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item boss">
+                    <a id="item87" onclick="check(this.id)"><img src="inv/Boss/Halcyon_Seed.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info87">
+                            <li><b>Семя безмятежности</b></li>
+                            <li>Призывает златитана во время события с телепортом.
+                                Златитан наносит 100% (+50% за шт.) урона и имеет +100% за шт. здоровья</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item boss">
+                    <a id="item88" onclick="check(this.id)"><img src="inv/Boss/Little_Disciple.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info88">
+                            <li><b>Маленький последователь</b></li>
+                            <li>Стреляет самонаводящимися сгустками, наносящими +300% за шт. урона. Сгустки выпускаются каждые 1,6 сек. во время бега. Скорострельность зависит от скорости передвижения</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item boss">
+                    <a id="item89" onclick="check(this.id)"><img src="inv/Boss/Pearl.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info89">
+                            <li><b>Жемчужина</b></li>
+                            <li>Увеличивает максимальный запас здоровья на +10% за шт.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item boss">
+                    <a id="item90" onclick="check(this.id)"><img src="inv/Boss/Irradiant_Pearl.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info90">
+                            <li><b>Сияющая жемчужина</b></li>
+                            <li>Повышает все параметры на +10% за шт.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item boss">
+                    <a id="item91" onclick="check(this.id)"><img src="inv/Boss/Genesis_Loop.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info91">
+                            <li><b>Цикл бытия</b></li>
+                            <li>Если уровень вашего здоровья опускается ниже25%, вы взрываетесь, нанося 6000% базового урона. Восстанавливается каждые 30 сек. / (2 + (+1 за шт.))</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item boss">
+                    <a id="item92" onclick="check(this.id)"><img src="inv/Boss/Artifact_Key.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info92">
+                            <li><b>Ключ для артефакта</b></li>
+                            <li>Нужен при открытии одного из артефакта, используется для убийства сферы в зоне артефакта</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item boss">
+                    <a id="item93" onclick="check(this.id)"><img src="inv/Boss/Molten_Perforator.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info93">
+                            <li><b>Расплавленный пронзатель</b></li>
+                            <li>При попадании 10% шанс призвать 3 огненных шара, каждый наносит
+                                300% урона(+300% за шт.)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item boss">
+                    <a id="item94" onclick="check(this.id)"><img src="inv/Boss/Shatterspleen.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info94">
+                            <li><b>Вырезанная селезёнка</b></li>
+                            <li>Даёт +5% к крит. шансу. Крит. удары вызывают кровотечение 240% от базового урона. Кровоточащие враги взрываются 400%(+400% за шт.) +15%(+15%за шт.) от их макс. здоровья</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item boss">
+                    <a id="item95" onclick="check(this.id)"><img src="inv/Boss/Mired_Urn.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info95">
+                            <li><b>Загрязнённая урна</b></li>
+                            <li>Во время боя, 1(+1 за шт.) ближайшее существо в радиусе 13 метров присасывается к вам и наносит ему урон 100%(+100% за шт.) в секунду. Исцеляет вас на 100% от нанесённого урона</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item boss">
+                    <a id="item96" onclick="check(this.id)"><img src="inv/Boss/Charged_Perforator.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info96">
+                            <li><b>Заряженный пронзатель</b></li>
+                            <li>10% шанс при атаке ударить молнией 500% урона(+500% за шт.)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item boss">
+                    <a id="item97" onclick="check(this.id)"><img src="inv/Boss/Empathy_Cores.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info97">
+                            <li><b>Ядра сочувствия</b></li>
+                            <li>Каждые 30 сек., вызывает Зонды, даёт +100% урона(+100% за шт.) за каждого союзника в команде</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item boss">
+                    <a id="item98" onclick="check(this.id)"><img src="inv/Boss/Planula.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info98">
+                            <li><b>Планула</b></li>
+                            <li>При получении урона лечит на 15 ОЗ(+15 за шт.)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item boss">
+                    <a id="item99" onclick="check(this.id)"><img src="inv/Boss/Defense_Nucleus.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info99">
+                            <li><b>Защитное ядро</b></li>
+                            <li>После убийства элитного монстра создаёт "Alpha" конструкцию, имеющую 300% урона и 300% здоровья. Максимум 4 (+4 за шт.)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item boss">
+                    <a id="item100" onclick="check(this.id)"><img src="inv/Boss/Item_ScrapC_Yellow.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info100">
+                            <li><b>Лом, желтый</b></li>
+                            <li>Ничего не делает. Имеет приоритет при использовании с 3D-принтерами.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>
+            <!-- Лунные -->
+            <br>
+            <h1 style="color:#27B3CD;text-shadow: 3px 2px 5px black; font-family: Roboto Condensed; font-size: 30px; text-align: center;">Лунные предметы</h1>
+            <div class="workspace__lunar">
+                <div class="item lunar">
+                    <a id="item101" onclick="check(this.id)"><img src="inv/Lunar/Shaped_Glass.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info101">
+                            <li><b>Формованное стекло</b></li>
+                            <li>Увеличивает урон на +100% за шт., но уменьшает максимальное здоровье на -50% за шт.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item lunar">
+                    <a id="item102" onclick="check(this.id)"><img src="inv/Lunar/Brittle_Crown.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info102">
+                            <li><b>Хрупкий венец</b></li>
+                            <li>Даёт 30% шанс получить +2 за шт. золота, нанося урон. При получении урона Вы теряете золото в количестве, равном +100% за шт. от числа попаданий по вам, или теряете золото в количестве, равном +100% за шт. от % потерянного максимального здоровья</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item lunar">
+                    <a id="item103" onclick="check(this.id)"><img src="inv/Lunar/Transcendence.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info103">
+                            <li><b>Превосходство</b></li>
+                            <li>Конвертирует все здоровье, кроме 1 единицы, в щиты. Даёт 50% максимального здоровья +25% за шт. Щит восстанавливается через 7 секунд после последнего получения урона</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item lunar">
+                    <a id="item104" onclick="check(this.id)"><img src="inv/Lunar/Corpsebloom.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info104">
+                            <li><b>Мертвоцвет</b></li>
+                            <li>	Увеличивает лечение на +100% за шт., но всё лечение приходит с задержкой. Также ограничивает лечение за раз до 10% (-50% за стак) от максимального здоровья</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item lunar">
+                    <a id="item105" onclick="check(this.id)"><img src="inv/Lunar/Gesture_of_the_Drowned.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info105">
+                            <li><b>Жест утопленника</b></li>
+                            <li>Уменьшает время перезарядки активного предмета на 50% (+15% за шт.), но перезаряженный предмет будет автоматически активирован</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item lunar">
+                    <a id="item106" onclick="check(this.id)"><img src="inv/Lunar/Strides_of_Heresy.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info106">
+                            <li><b>Распространение ереси</b></li>
+                            <li>Заменяет вспом. навык. Вы исчезаете из реальности и получаете +30% к скорости движения. Мгновенно исцеляет на +18,2% за шт. от максимального запаса здоровья. Действует +3 за шт. секунды</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item lunar">
+                    <a id="item107" onclick="check(this.id)"><img src="inv/Lunar/Visions_of_Heresy.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info107">
+                            <li><b>Видение ереси</b></li>
+                            <li>Заменяет основной навык.
+                                Выстреливает шквал отслеживающих осколков, взрывающихся через определённое время, нанося 120% базового урона. До +12 за шт., которые перезаряжаются через +2 сек. за шт.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item lunar">
+                    <a id="item108" onclick="check(this.id)"><img src="inv/Lunar/Beads_of_Fealty.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info108">
+                            <li><b>Бусины верности</b></li>
+                            <li>Кажется, ничего не делать... но...
+                                Открывает потайную локацию после завершения у Обелиска
+                                (просто использовать, закончив игру)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item lunar">
+                    <a id="item109" onclick="check(this.id)"><img src="inv/Lunar/Focused_Convergence.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info109">
+                            <li><b>Сфокусированная конвергенция</b></li>
+                            <li>Заряжает портал на +30% за шт., но зона портала на -50% за шт. меньше. Больше 3-ёх предметов результат не даёт</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item lunar">
+                    <a id="item110" onclick="check(this.id)"><img src="inv/Lunar/Defiant_Gouge.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info110">
+                            <li><b>Неподатливое долото</b></li>
+                            <li>Используя храмы(shrines), появляются враги. Кол-во зависит от времени</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item lunar">
+                    <a id="item111" onclick="check(this.id)"><img src="inv/Lunar/Mercurial_Rachis.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info111">
+                            <li><b>Ртутный позвоночник</b></li>
+                            <li>Со случайным местоположением создаёт Оберег силы, тем самым усиливая врагов и союзников на +50% к урону, в радиусе 16 м.(+50% за шт.)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item lunar">
+                    <a id="item112" onclick="check(this.id)"><img src="inv/Lunar/Purity.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info112">
+                            <li><b>Чистота</b></li>
+                            <li>Перезарядка навыков уменьшена на 2 сек.(+1 за шт.), но теперь все рандомные эффекты переигрываются +1 раз(+1 за шт.) для неблагоприятного исхода.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item lunar">
+                    <a id="item113" onclick="check(this.id)"><img src="inv/Lunar/Hooks_of_Heresy.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info113">
+                            <li><b>Крюки ереси</b></li>
+                            <li>Заменяет Secondary skill. Заряжает выстрел наносящий 875% урона ближайшим врагам, взрывается через 3 секунды нанося 700% урона и обездвиживает на 3 сек.(+3 за шт.). Перезаряжается 5 сек(+5 за шт.).</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item lunar">
+                    <a id="item114" onclick="check(this.id)"><img src="inv/Lunar/Egocentrism.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info114">
+                            <li><b>Эгоцентризм</b></li>
+                            <li>Каждые 3 (-50% за шт.) секунды, даёт орбитальную бомбу, которая взрывается при контакте нанося 360% урона. Максимум 3 (+1 за шт.) бомбы. Каждые 60 секунд ваш случайный предмет превращается в бомбу</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item lunar">
+                    <a id="item115" onclick="check(this.id)"><img src="inv/Lunar/Eulogy_Zero.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info115">
+                            <li><b>Хвала - Zero</b></li>
+                            <li>Предметы имеют 5% (+5% за шт.) шанс превратиться в лунарный предмет</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item lunar">
+                    <a id="item116" onclick="check(this.id)"><img src="inv/Lunar/Stone_Flux_Pauldron.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info116">
+                            <li><b>Каменный потоковый наплеч</b></li>
+                            <li>Увеличивает макс. здоровье на 100% (+100% за шт.). Уменьшая скорость бега га 50% (+50% за шт.)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item lunar">
+                    <a id="item117" onclick="check(this.id)"><img src="inv/Lunar/Light_Flux_Pauldron.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info117">
+                            <li><b>Лёгкий потоковый наплеч</b></li>
+                            <li>Уменьшает перезарядку способностей на 50% (+50% за шт.). Уменьшая скорость атаки на 50% (+50% за шт.)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item lunar">
+                    <a id="item118" onclick="check(this.id)"><img src="inv/Lunar/Essence_of_Heresy.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info118">
+                            <li><b>Эссенция ереси</b></li>
+                            <li>Заменяет Special skill.
+                                Наносит урон и добавляет заряды на способности, 10 сек. (+10 за шт.). Активация способности взрывает все заряды, неограниченный радиус, наносит 300% урона + 120% урона за каждый заряд способности . Перезарядка 8 сек.(+8 за шт.)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item lunar">
+                    <a id="item119" onclick="check(this.id)"><img src="inv/Lunar/Glowing_Meteorite.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info119">
+                            <li><b>Светящийся метеорит</b></li>
+                            <li>Вызывает метеоритный дождь, который длится 20 секунд. Каждый метеорит наносит 600% всем персонажам</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item lunar">
+                    <a id="item120" onclick="check(this.id)"><img src="inv/Lunar/Helfire_Tincture.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info120">
+                            <li><b>Настойка адского пламени</b></li>
+                            <li>Поджигает всех персонажей в радиусе 15 метров на 12 сек., нанося 5% здоровья/сек. от максимального здоровья. Наносит в 2 раза меньше урона по вам, и в 4 по союзникам, и в 24 раза больше урона противникам</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item lunar">
+                    <a id="item121" onclick="check(this.id)"><img src="inv/Lunar/Effigy_of_Grief.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info121">
+                            <li><b>Тотем горя</b></li>
+                            <li>Выбрасывается при использовании, замедляет всех персонажей на 50% в радиусе и уменьшает их броню на 20%. Максимум 5 штук</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item lunar">
+                    <a id="item122" onclick="check(this.id)"><img src="inv/Lunar/Spinel_Tonic.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info122">
+                            <li><b>Шпинельный тоник</b></li>
+                            <li>Действует 20 сек., увеличивает урон на 100%. Повышает скорость атаки на +70%. Улучшает броню на +20. Увеличивает макс. здоровье на +50%. Ускоряет пассивную регенерацию здоровья на 300%. Повышает скорость движения на +30%.
+                                Когда действие тоника прекращается, с вероятностью 20% вы получите снижение всех параметров на 5%</li>
+                        </ul>
+                    </div>
+                </div>
+               
+            </div>
+            <!-- Пустотные -->
+            <br>
+            <h1 style="color:#a50abd;text-shadow: 3px 2px 5px black; font-family: Roboto Condensed; font-size: 30px; text-align: center;">Пустотные предметы</h1>
+            <div class="workspace__void">                
+                <div class="item void">
+                    <a id="item123" onclick="check(this.id)"><img src="inv/Void/Benthic_Bloom.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info123">
+                            <li><b>Benthic Bloom</b></li>
+                            <li>Улучшает 3 (+3 за шт.) случайных предмета до предметов следующей редкости (От белого к зелёному) на старте каждого этажа</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item void">
+                    <a id="item124" onclick="check(this.id)"><img src="inv/Void/Encrusted_Key.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info124">
+                            <li><b>Encrusted Key</b></li>
+                            <li>Скрытый ящик, которой имеет предмет (60% белый/ 30% зелёный/ 10% красный), появляется на локации случайно. Открытие ящика использует этот предмет</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item void">
+                    <a id="item125" onclick="check(this.id)"><img src="inv/Void/Lost_Seers_Lenses.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info125">
+                            <li><b>Lost Seer's Lenses</b></li>
+                            <li>Имеет 0,5% (+0,5% за шт.) шанс моментально убить врага, не являющихся боссами</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item void">
+                    <a id="item126" onclick="check(this.id)"><img src="inv/Void/Lysate_Cell.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info126">
+                            <li><b>Lysate Cell</b></li>
+                            <li>Даёт +1 (+1 за шт.) заряд специальной способности. Уменьшает перезарядку специальной способности на 33%</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item void">
+                    <a id="item127" onclick="check(this.id)"><img src="inv/Void/Needletick.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info127">
+                            <li><b>Needlestick</b></li>
+                            <li>Имеет шанс 10%(+10% за шт.) повесить дебафф "collapse", который активируется через 3 секунды и нанесёт 400% базового урона</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item void">
+                    <a id="item128" onclick="check(this.id)"><img src="inv/Void/Newly_Hatched_Zoea.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info128">
+                            <li><b>Newly Hatched Zoea</b></li>
+                            <li>Каждые 60 (-50% за шт.) секунд, даёт союзника из пустоты. Можно иметь за раз до 1 (+1 за шт.) союзников</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item void">
+                    <a id="item129" onclick="check(this.id)"><img src="inv/Void/Plasma_Shrimp.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info129">
+                            <li><b>Plasma Shrimp</b></li>
+                            <li>Даёт щит, равный 10% от вашего максимального здоровья. Пока у вас есть щит, попадание во врага запускает ракету, которая наносит 40% (+40% за шт.) общего урона.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item void">
+                    <a id="item130" onclick="check(this.id)"><img src="inv/Void/Pluripotent_Larva.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info130">
+                            <li><b>Pluripotent Larva</b></li>
+                            <li>Если вы умерли, то этот предмет используется и к жизни с 3 секундами бессмертия, и все ваши предметы могут стать испорченными</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item void">
+                    <a id="item131" onclick="check(this.id)"><img src="inv/Void/Polylute.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info131">
+                            <li><b>Polylute</b></li>
+                            <li>25% шанс выстрелить молнией нанося 60% всего урона, 3 (+3 за шт.) раза одновременно</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item void">
+                    <a id="item132" onclick="check(this.id)"><img src="inv/Void/Safer_Spaces.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info132">
+                            <li><b>Safer Spaces</b></li>
+                            <li>Блокирует входящий урон один раз. Перезарядка 15 секунд (-10% за шт.)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item void">
+                    <a id="item133" onclick="check(this.id)"><img src="inv/Void/Singularity_Band.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info133">
+                            <li><b>Singularity Band</b></li>
+                            <li>Поглощает все браслеты Рунальда и Кьяро. Удар который наносит урона больше чем 400% создаёт область которая засасывает всех врагов в радиусе 15 метров со временем взрывается и наносит 100% (+100% за шт.) всего урона. Перезарядка 20 секунд</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item void">
+                    <a id="item134" onclick="check(this.id)"><img src="inv/Void/Tentabauble.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info134">
+                            <li><b>Tentabauble</b></li>
+                            <li>5% (+5% за шт.) шанс при нанесении урона может обездвижить врага на 1 сек (+1 сек. за шт.)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item void">
+                    <a id="item135" onclick="check(this.id)"><img src="inv/Void/Voidsent_Flame.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info135">
+                            <li><b>Voidsent Flame</b></li>
+                            <li>При нанесении урона врагу с полным здоровьем, создаёт столб лавы в радиусе 12 метров (+2,4м за шт.), нанося 260% (+156% за шт.) базового урона.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item void">
+                    <a id="item136" onclick="check(this.id)"><img src="inv/Void/Weeping_Fungus.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info136">
+                            <li><b>Weeping Fungus</b></li>
+                            <li>Лечит на 2% (+2% за шт.) от вашего здоровья вас пока вы находитесь в состоянии бега</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <!-- Активные -->
+            <br>
+            <h1 style="color:#dd7505;text-shadow: 3px 2px 5px black; font-family: Roboto Condensed; font-size: 30px; text-align: center;">Активные предметы</h1>
+            <div class="workspace__equipment">
+                <div class="item equipment">
+                    <a id="item137" onclick="check(this.id)"><img src="inv/Equipment/Disposable_Missile_Launcher.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info137">
+                            <li><b>Никудышная ракетная установка</b></li>
+                            <li>При использовании выпускает 12 самонаводящихся ракет, каждая наносит 300% базового урона</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item equipment">
+                    <a id="item138" onclick="check(this.id)"><img src="inv/Equipment/Foreign_Fruit.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info138">
+                            <li><b>Странный плод</b></li>
+                            <li>Мгновенно исцеляет 50% максимального здоровья</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item equipment">
+                    <a id="item139" onclick="check(this.id)"><img src="inv/Equipment/Primordial_Cube.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info139">
+                            <li><b>Первобытный куб</b></li>
+                            <li>Выпускает черную дыру, которая засасывает всех врагов в радиусе 30 метров. Длится 10 секунд.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item equipment">
+                    <a id="item140" onclick="check(this.id)"><img src="inv/Equipment/Trophy_Hunters_Tricorn.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info140">
+                            <li><b>Треуголка охотника за трофеями</b></li>
+                            <li>Казните врага с которого может выпасть уникальный предмет, он 100% его выбросит(в том числе босс предметы)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item equipment">
+                    <a id="item141" onclick="check(this.id)"><img src="inv/Equipment/Ocular_HUD.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info141">
+                            <li><b>Интерфейс окуляра</b></li>
+                            <li>При использовании даёт 100% шанс критического удара на 8 секунд</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item equipment">
+                    <a id="item142" onclick="check(this.id)"><img src="inv/Equipment/The_Back-up.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info142">
+                            <li><b>Резерв</b></li>
+                            <li>Призывает 4 боевых дронов на 25 секунд, которые сражаются за вас</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item equipment">
+                    <a id="item143" onclick="check(this.id)"><img src="inv/Equipment/Preon_Accumulator.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info143">
+                            <li><b>Накопитель преонов</b></li>
+                            <li>Выпускает энергетический шар, который летит по прямой, нанося всем врагам в радиусе 35м 600% урона/сек. При контакте взрывается, нанося всем врагам в радиусе 20м 4000% урона</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item equipment">
+                    <a id="item144" onclick="check(this.id)"><img src="inv/Equipment/Goobo_Jr..webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info144">
+                            <li><b>Губо-младший</b></li>
+                            <li>Создаёт липкого клона, который имеет 300% урона, 300% здоровья</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item equipment">
+                    <a id="item145" onclick="check(this.id)"><img src="inv/Equipment/Milky_Chrysalis.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info145">
+                            <li><b>Молочная куколка</b></li>
+                            <li>При использовании Персонаж отращивает крылья, позволяющие летать и увеличивающие скорость передвижения на 20%. Длится 15 секунд</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item equipment">
+                    <a id="item146" onclick="check(this.id)"><img src="inv/Equipment/Royal_Capacitor.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info146">
+                            <li><b>Королевский конденсатор</b></li>
+                            <li>Наносит 3000% урона выбранному врагу и оглушает ближайшие цели</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item equipment">
+                    <a id="item147" onclick="check(this.id)"><img src="inv/Equipment/Molotov_29.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info147">
+                            <li><b>Молотов (6-набор)</b></li>
+                            <li>Бросает 6 коктейлей Молотовых, поджигая и нанося 500% базового урона</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item equipment">
+                    <a id="item148" onclick="check(this.id)"><img src="inv/Equipment/Executive_Card.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info148">
+                            <li><b>Исполнительная карта</b></li>
+                            <li>Когда вы тратите золото, вам возвращается 10% золота обратно. Если покупка была в Мульти-магазине, то остальные ячейки в магазине будут открыты</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item equipment">
+                    <a id="item149" onclick="check(this.id)"><img src="inv/Equipment/The_Crowdfunder.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info149">
+                            <li><b>Спонсор</b></li>
+                            <li>Выпускает непрерывный заградительный огонь, наносящий 100% урона одной пулей. Тратит 1 золото на 1 пулю. Стоимость увеличивается со временем</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item equipment">
+                    <a id="item150" onclick="check(this.id)"><img src="inv/Equipment/Gnarled_Woodsprite.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info150">
+                            <li><b>Корявая дриада</b></li>
+                            <li>Даёт Лесного Духа, который летает за вами и восстанавливает 1.5% максимального здоровья/секунду(пассивный эффект). Можно использовать на союзнике, вылечив до 10% от максимального здоровья</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item equipment">
+                    <a id="item151" onclick="check(this.id)"><img src="inv/Equipment/Radar_Scanner.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info151">
+                            <li><b>Радар</b></li>
+                            <li>Разведывает карту и помечает сундуки и остальные предметы</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item equipment">
+                    <a id="item152" onclick="check(this.id)"><img src="inv/Equipment/Eccentric_Vase.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info152">
+                            <li><b>Странный сосуд</b></li>
+                            <li>Создает квантовый туннель длиной до 1000 м. Действует 30 сек</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item equipment">
+                    <a id="item153" onclick="check(this.id)"><img src="inv/Equipment/Blast_Shower.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info153">
+                            <li><b>Град взрывов</b></li>
+                            <li>Снимает все отрицательные эффекты, а также уничтожает снаряды рядом</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item equipment">
+                    <a id="item154" onclick="check(this.id)"><img src="inv/Equipment/Volcanic_Egg.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info154">
+                            <li><b>Вулканическое яйцо</b></li>
+                            <li>Вы превращаетесь в сгусток драконьего пламени на 5 сек. Наносит 500% урона при попадании. После взрывается, нанося 800% урона</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item equipment">
+                    <a id="item155" onclick="check(this.id)"><img src="inv/Equipment/Jade_Elephant.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info155">
+                            <li><b>Нефритовый слон</b></li>
+                            <li>Даёт 500 брони на 5 секунд</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item equipment">
+                    <a id="item156" onclick="check(this.id)"><img src="inv/Equipment/Sawmerang.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info156">
+                            <li><b>Пилоранг</b></li>
+                            <li>Бростье три больших пилы, которые рассекают врагов на предмет 3x400%. Также наносят дополнительный урон кровотечением в секунду 3x100%. Возвращается к вам ударяя врагов</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item equipment">
+                    <a id="item157" onclick="check(this.id)"><img src="inv/Equipment/Recycler.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info157">
+                            <li><b>Переработчик</b></li>
+                            <li>Может переработать предмет или активку в другой предмет, но такого же тира</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item equipment">
+                    <a id="item158" onclick="check(this.id)"><img src="inv/Equipment/Super_Massive_Leech.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info158">
+                            <li><b>Очень большая пиявка</b></li>
+                            <li>Даёт 20% процентов от нанесённого урона. Длиться 8 секунд</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item equipment">
+                    <a id="item159" onclick="check(this.id)"><img src="inv/Equipment/Gorags_Opus.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info159">
+                            <li><b>Опус Горага</b></li>
+                            <li>Вводит союзников в бешенство на
+                                7 секунд. Увеличивает скорость передвижения на 50% и повышает скорострельность на 100%.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item equipment">
+                    <a id="item160" onclick="check(this.id)"><img src="inv/Equipment/Forgive_Me_Please.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info160">
+                            <li><b>Прости меня пожалуйста</b></li>
+                            <li>Бросает куклу, которая использует, предметы с эффектом после убийства
+                                (которые длятся не меньше 1 секунды). Продолжительность 8 секунд</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item equipment">
+                    <a id="item161" onclick="check(this.id)"><img src="inv/Equipment/Remote_Caffeinator.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info161">
+                            <li><b>Дистанционный кофеинатор</b></li>
+                            <li>Вызовите Eclipse Zero торговый автомат из UES Safe Travels. Доставка занимает 5 секунд, наносит 2000% урона. Лечит до трёх целей на 25% от их максимального здоровья</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item equipment">
+                    <a id="item162" onclick="check(this.id)"><img src="inv/Equipment/Ifrits_Distinction.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info162">
+                            <li><b>Метка ифрита</b></li>
+                            <li>Наделяет владельца силой огненной элиты. На персонаже появляются рога и он окрашивается в красный цвет. При беге остается огненный след, который наносит урон врагам, а удары поджигают противников</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item equipment">
+                    <a id="item163" onclick="check(this.id)"><img src="inv/Equipment/His_Reassurance.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info163">
+                            <li><b>Его утешения</b></li>
+                            <li>	Игрок иногда лечит ближайших союзников, после смерти оставляет лечащую сферу. Топливный элемент и предметы уменьшения перезарядки не оказывают эффекта</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item equipment">
+                    <a id="item164" onclick="check(this.id)"><img src="inv/Equipment/Silence_Between_Two_Strikes.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info164">
+                            <li><b>Затишье между двумя ударами</b></li>
+                            <li>Наделяет владельца силой перегруженной элиты. На персонаже появляются 2 рога и он окрашивается в кислотно-голубой цвет. При ударах по врагу прикрепляет электр. бомбу, которая взрывается спустя некоторое время, нанося 50% урона. Половина здоровья замещается щитами</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item equipment">
+                    <a id="item165" onclick="check(this.id)"><img src="inv/Equipment/Her_Biting_Embrace.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info165">
+                            <li><b>Её колючие объятия</b></li>
+                            <li>Наделяет владельца силой ледяной элиты. На персонаже появляются кристаллы льда и он окрашивается в голубой цвет. При ударах замедляет противника. После смерти появляется ледяная сфера, которая взрывается спустя 2 секунды, нанося 150% урона и замораживает всех врагов в радиусе действия</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item equipment">
+                    <a id="item166" onclick="check(this.id)"><img src="inv/Equipment/N_Retort.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info166">
+                            <li><b>Возражение Н'Кухана</b></li>
+                            <li>Все атаки игрока отключают лечение у врагов на 8 секунд, также они будут периодически выпускать 3-4 колючих шара. При касании, шары будут взрываться 100% урона и создавать колючие ямы наносящие 100% урона при контакте. В дополнение игрок после смерти будет оставлять после себя монстра который будет атаковать ближайших врагов, но с Лучший друг Дио он имеет ограниченную пользу.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item equipment">
+                    <a id="item167" onclick="check(this.id)"><img src="inv/Equipment/Spectral_Circlet.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info167">
+                            <li><b>Спектральная окружность</b></li>
+                            <li>Атаки игрока замедляют врагов на 80%, также создаёт ауру которая делает вас и ваших союзников невидимыми.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item equipment">
+                    <a id="item168" onclick="check(this.id)"><img src="inv/Equipment/Shared_Design.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info168">
+                            <li><b>Общий дизайн</b></li>
+                            <li>Атаки игрока калечит врага, -20 брони и -50% скорости передвижения, иногда выстреливает 4-мя бомбами во врагов, которые увеличат скорость передвижение на 30% и увеличит макс здоровье на 25%, но превратит всё здоровье в броню кроме одного очка здоровья (подобно Трансцендентности(синий предмет)).</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item equipment">
+                    <a id="item169" onclick="check(this.id)"><img src="inv/Equipment/Fuel_Array.webp" alt="" ></a>
+                    <div class="info" >
+                        <ul style="margin: 0; display: none;" id="info169">
+                            <li><b>Топливный массив</b></li>
+                            <li>Выглядит как будто это может что-то зарядить. Слишком нестабильно. Нужен для открытия одного из персонажей, используется на лавовом этаже</li>
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+<footer style="padding-top: 80px;"></footer>
+<script src="script.js"></script>
+</body>
+</html>
